@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Registration Page</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='/main.css')}}" type="text/css">
+</head>
+<body>
+    <h1>Predict Your Flight Delay Chances</h1>
+
+        <form action="/predict" method="POST">
+            <label>Flight Number</label>
+            <input type="number" name="flightnumber" id="flightnumber" placeholder="Flight Number">
+
+            <label>Month of Travel</label>
+            <input type="number" name="month" id="month" placeholder="Month of Travel">
+
+            <label>Travel Day of Month</label>
+            <input type="number" name="day" id="day" placeholder="Enter Day of month ">
+
+            <label>Travel Day of Week</label>
+            <input type="number" name="week" id="week" placeholder="Enter Day of week ">
+
+            <label>Delay in Departure</label>
+            <input type="number" name="dep_delay" id="dep_delay" placeholder="Enter The Delay in Departure" step=".01">
+
+            <label>Scheduled Arrival time</label>
+            <input type="number" name="schdl_arriv" id="schdl_arriv" placeholder="Enter The Time of Scheduled Arrival">
+
+
+            <input type="submit" value="Predict" class="sbt_btn">
+        </form>
+</body>
+</html>
